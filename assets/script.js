@@ -87,22 +87,22 @@ const arrow_right = document.querySelector(".arrow_right");
 
 function defilementCarrousel(counter,dot_1,dot_2){
 
-	//ENLEVER LA COULEUR BLANCHE
+	//Desactive  l'ancien point active 
 	dot_1.classList.remove("dot_selected");
 
-	//AJOUTER LA COULEUR BLANCHE
+	//Active le nouveau point correspondant a la nouvelle image 
 	dot_2.classList.add("dot_selected");
 
-	//JE SELECTIONNE LIMAGE A MODIFIER
+	//Selectionne l'image de la banniere
 	const image = document.querySelector(".banner-img");
 
-	//JE MODIFIE LA SRC DE LIMAGE QUE JE VEUX MODIFIER
+	//Modifie la source de l 'image pour afficher la nouvelle 
 	image.src = "./assets/images/slideshow/" + slides[counter].image;
 
-	//JE SELECTIONNE LE TEXTE A MODIFIER
+	//Selectionne le texte associé a l'image 
 	const tagline = document.querySelector("#banner p");
 
-	//MODIFIER LE TEXTE
+	//Mettre a jour le texte avec celui de la nouvelle image 
 	tagline.innerHTML = slides[counter].tagLine;		
 }
 
